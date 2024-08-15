@@ -1,3 +1,23 @@
+const {
+    Client,
+    Collection,
+    Events,
+    GatewayIntentBits,
+    Partials,
+    EmbedBuilder,
+    AttachmentBuilder,
+} = require("discord.js");
+const crypto = require('crypto');
+const client = new Client({
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.MessageContent,
+        GatewayIntentBits.DirectMessages,
+        GatewayIntentBits.GuildVoiceStates,
+    ],
+    partials: [Partials.Channel],
+});
 function convertBase(str, fromBase, toBase) {
     const DIGITS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+/-\\=.,;:!?%&$#@*~_`\'"|[](){}<>^ ';
     const DIGITS_INDEX = {};
@@ -317,3 +337,4 @@ client.once("ready", async () => {
     persistStore.deleter()
     persistStore.loaded = true
 });
+client.login('your token');
