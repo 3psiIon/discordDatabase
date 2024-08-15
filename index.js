@@ -314,5 +314,6 @@ client.once("ready", async () => {
         await panel.sleep(300)
     }
     persistStore.updater()
+    persistStore.deleter()
     persistStore.loaded = true
 });
