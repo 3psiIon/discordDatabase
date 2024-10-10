@@ -1,4 +1,4 @@
-# discordDatabase
+# discordStorage
 ## Info
 
 Made for Node.js and requires Discord.js. Basically allows you to store and retrieve data from discord. Supports objects (the key-value pair ones), arrays, strings, numbers, bigints, booleans, null, undefined, buffers, and functions. The database is meant for readability, so there is no data compression. The encrypted version also doesn't have data compression, I was too lazy. This was made so that I can save data without storing it to disk. Automatically deletes messages the db doesnt need anymore on startup, you can remove it if you need to. Might have a few bugs in it, use at your own risk.
